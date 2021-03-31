@@ -1,3 +1,2 @@
 #!/bin/sh
-
-git log -n 5 --format=format:"%H"
+git log -5 --format=format:"%H" | cut -d ' ' -f 10
