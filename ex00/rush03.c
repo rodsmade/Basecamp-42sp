@@ -1,20 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   rush03.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ade-souz <ade-souz@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/01 13:52:04 by ade-souz          #+#    #+#             */
-/*   Updated: 2021/04/03 01:16:40 by ade-souz         ###   ########.fr       */
+/*   Updated: 2021/04/03 02:29:10 by ade-souz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <unistd.h>
 #include "functions.h"
 
-int	main(void)
+void	rush(int x, int y)
 {
-	rush(4, 4);
-	return (0);
+	char r[2];
+
+	r[1] = 1;
+	while (r[1] <= y)
+	{
+		r[0] = 1;
+		while (r[0] <= x)
+		{
+			if ((r[0] == 1 && r[1] == 1) || (r[0] == 1 && r[1] == y))
+				ft_putchar('A');
+			else if ((r[0] == x && r[1] == 1) || (r[0] == x && r[1] == y))
+				ft_putchar('C');
+			else if (r[0] == 1 || r[0] == x || r[1] == 1 || r[1] == y)
+				ft_putchar('B');
+			else
+				ft_putchar(' ');
+			r[0]++;
+		}
+		ft_putchar('\n');
+		r[1]++;
+	}
 }
