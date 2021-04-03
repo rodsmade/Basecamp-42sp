@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rush04.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ade-souz <ade-souz@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: roaraujo <roaraujo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/01 13:52:04 by ade-souz          #+#    #+#             */
-/*   Updated: 2021/04/03 02:34:10 by ade-souz         ###   ########.fr       */
+/*   Updated: 2021/04/03 03:15:56 by roaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,12 @@ void	rush(int x, int y)
 		r[0] = 1;
 		while (r[0] <= x)
 		{
-			if ((r[0] == 1 && r[1] == 1) || (r[0] == x && r[1] == y))
+			if (r[0] == 1 && r[1] == 1)
 				ft_putchar('A');
 			else if ((r[0] == x && r[1] == 1) || (r[0] == 1 && r[1] == y))
 				ft_putchar('C');
+			else if (r[0] == x && r[1] == y)
+				ft_putchar('A');
 			else if (r[0] == 1 || r[0] == x || r[1] == 1 || r[1] == y)
 				ft_putchar('B');
 			else
