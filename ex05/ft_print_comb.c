@@ -6,7 +6,7 @@
 /*   By: roaraujo <roaraujo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/03 04:50:55 by roaraujo          #+#    #+#             */
-/*   Updated: 2021/04/03 19:13:27 by roaraujo         ###   ########.fr       */
+/*   Updated: 2021/04/03 20:34:25 by roaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,27 +33,28 @@ void	ft_print_comb(void)
 	
 	while(centena<='9')
 	{
-		while(dezena<='9')
+		dezena=centena+1;
+		while(dezena<='9' && dezena>centena)
 		{
-			while(unidade<='9')
+			unidade=dezena+1;
+			while(unidade<='9' && unidade>dezena)
 			{
 				write(1,&centena,1);
 				write(1,&dezena,1);
 				write(1,&unidade,1);
-				if(!(centena=='9' && dezena=='9' && unidade=='9'))
+				if(!(centena=='7' && dezena=='8' && unidade=='9'))
 				{
-				write(1,", ",2);
+					write(1, ", ", 2);
 				}
 				unidade++;
 			}
-			unidade='0';
 			dezena++;
 		}
-		dezena='0';
 		centena++;
 	}
 	
-	write(1,&centena,1);
-	write(1,&dezena,1);
-	write(1,&unidade,1);
+	write(1, "FINZAO", 6);
+	write(1, &centena, 1);
+	write(1, &dezena, 1);
+	write(1, &unidade, 1);
 }
