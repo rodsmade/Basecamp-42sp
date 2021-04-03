@@ -6,7 +6,7 @@
 /*   By: roaraujo <roaraujo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/03 04:51:29 by roaraujo          #+#    #+#             */
-/*   Updated: 2021/04/03 04:51:30 by roaraujo         ###   ########.fr       */
+/*   Updated: 2021/04/03 19:11:15 by roaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,4 +16,6 @@ and 99, listed by ascending order.
 $>./a.out | cat -e
 00 01, 00 02, 00 03, 00 04, 00 05, ..., 00 99, 01 02, ..., 97 99, 98 99$>
 • Here’s how it should be prototyped :
+#include <unistd.h>
+
 void ft_print_comb2(void);
