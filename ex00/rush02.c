@@ -6,12 +6,11 @@
 /*   By: roaraujo <roaraujo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/01 13:52:04 by ade-souz          #+#    #+#             */
-/*   Updated: 2021/04/03 02:58:31 by roaraujo         ###   ########.fr       */
+/*   Updated: 2021/04/04 14:59:12 by roaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include "functions.h"
+#include "header.h"
 
 void	rush(int x, int y)
 {

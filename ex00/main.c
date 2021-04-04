@@ -6,12 +6,11 @@
 /*   By: roaraujo <roaraujo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/01 13:52:04 by ade-souz          #+#    #+#             */
-/*   Updated: 2021/04/03 03:19:45 by roaraujo         ###   ########.fr       */
+/*   Updated: 2021/04/04 15:11:04 by roaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include "functions.h"
+#include "header.h"
 
 int	main(void)
 {
