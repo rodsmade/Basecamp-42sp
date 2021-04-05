@@ -6,7 +6,7 @@
 /*   By: roaraujo <roaraujo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/03 04:49:40 by roaraujo          #+#    #+#             */
-/*   Updated: 2021/04/05 00:33:50 by roaraujo         ###   ########.fr       */
+/*   Updated: 2021/04/05 15:05:50 by roaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_is_negative(int n)
 {
 	if (n < 0)
-		write(1, 'N', 1);
+		write(1, "N", 1);
 	else
-		write(1, 'P', 1);
+		write(1, "P", 1);
 }
