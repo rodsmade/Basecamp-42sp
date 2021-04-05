@@ -6,13 +6,13 @@
 /*   By: roaraujo <roaraujo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/01 13:52:04 by ade-souz          #+#    #+#             */
-/*   Updated: 2021/04/04 15:11:04 by roaraujo         ###   ########.fr       */
+/*   Updated: 2021/04/04 23:59:27 by roaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "header.h"
+void	rush(int x, int y);
 
-int	main(void)
+int		main(void)
 {
 	rush(5, 5);
 	return (0);

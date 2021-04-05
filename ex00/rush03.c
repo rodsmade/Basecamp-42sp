@@ -6,11 +6,11 @@
 /*   By: roaraujo <roaraujo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/01 13:52:04 by ade-souz          #+#    #+#             */
-/*   Updated: 2021/04/04 14:59:15 by roaraujo         ###   ########.fr       */
+/*   Updated: 2021/04/05 02:17:31 by roaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "header.h"
+void	ft_putchar(char c);
 
 void	rush(int x, int y)
 {
