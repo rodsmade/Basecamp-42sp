@@ -6,59 +6,37 @@
 /*   By: roaraujo <roaraujo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/03 04:51:29 by roaraujo          #+#    #+#             */
-/*   Updated: 2021/04/03 22:45:35 by roaraujo         ###   ########.fr       */
+/*   Updated: 2021/04/05 00:15:01 by roaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Create a function that displays all different combination of two digits between 00
-// and 99, listed by ascending order.
-// • Here’s the expected output :
-// $>./a.out | cat -e
-// 00 01, 00 02, 00 03, 00 04, 00 05, ..., 00 99, 01 02, ..., 97 99, 98 99$>
-// • Here’s how it should be prototyped :
 #include <unistd.h>
 
 void	ft_print_comb2(void)
 {
-	char dezena_par_dir;
-	char unidade_par_dir;
-	char dezena_par_esq;
-	char unidade_par_esq;
+	int		par_esquerda;
+	int		par_direita;
+	char	par_dir[2];
+	char	par_esq[2];
 
-	// dezena_par_esq = '0';
-	// 
-	// while (dezena_par_esq <= '9')
-	// {
-	// 	unidade_par_esq = '0';
-	// 	while (unidade_par_esq <= '9')
-	// 	{
-	// 		dezena_par_dir
-	// 		write(1, &dezena_par_esq, 1);
-	// 		write(1, &unidade_par_esq, 1);
-	// 		write(1, " ", 1);
-	// 		unidade_par_esq++;
-	// 	}
-	// 	dezena_par_esq++;
-	// }
-
-	dezena_par_dir = '0';
-	bg
-	while (dezena_par_dir <= '9')
+	par_esquerda = 00;
+	par_direita = par_esquerda + 1;
+	while (par_esquerda <= 98)
 	{
-		unidade_par_dir = '0';
-		while (unidade_par_dir <= '9')
+		while (par_direita <=99)
 		{
-			dezena_par_dir
-			write(1, &dezena_par_dir, 1);
-			write(1, &unidade_par_dir, 1);
-			write(1, " ", 1);
-			unidade_par_dir++;
+			par_esq[1] = (par_esquerda % 10) + '0';
+			par_esq[0] = ((par_esquerda / 10) % 10) + '0';
+			par_dir[1] = (par_direita % 10) + '0';
+			par_dir[0] = ((par_direita / 10) % 10) + '0';
+			write(1,par_esq,2);
+			write(1," ",1);
+			write(1,par_dir,2);
+			if (par_esquerda != 98)
+			    write(1,", ",2);
+			par_direita++;
 		}
-		dezena_par_dir++;
+		par_esquerda++;
+		par_direita = par_esquerda + 1;
 	}
-}
-
-int main(){
-	ft_print_comb2();
-	return 0;
 }

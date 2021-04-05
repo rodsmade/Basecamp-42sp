@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: roaraujo <roaraujo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/03 04:50:55 by roaraujo          #+#    #+#             */
-/*   Updated: 2021/04/03 20:46:09 by roaraujo         ###   ########.fr       */
+/*   Created: 2021/04/05 00:09:13 by roaraujo          #+#    #+#             */
+/*   Updated: 2021/04/05 00:10:16 by roaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,33 +14,26 @@
 
 void	ft_print_comb(void)
 {
-	char centena;
-	char dezena;
-	char unidade;
-	
-	centena='0';
-	dezena='0';
-	unidade='0';
-	
-	while(centena<='9')
+	char numero[3];
+
+	numero[0] = '0';
+	numero[1] = '0';
+	numero[2] = '0';
+	while (numero[0] <= '9')
 	{
-		dezena=centena+1;
-		while(dezena<='9' && dezena>centena)
+		numero[1] = numero[0] + 1;
+		while (numero[1] <= '9' && numero[1] > numero[0])
 		{
-			unidade=dezena+1;
-			while(unidade<='9' && unidade>dezena)
+			numero[2] = numero[1] + 1;
+			while (numero[2] <= '9' && numero[2] > numero[1])
 			{
-				write(1,&centena,1);
-				write(1,&dezena,1);
-				write(1,&unidade,1);
-				if(!(centena=='7' && dezena=='8' && unidade=='9'))
-				{
+				write(1, numero, 3);
+				if (!(numero[0] == '7' && numero[1] == '8' && numero[2] == '9'))
 					write(1, ", ", 2);
-				}
-				unidade++;
+				numero[2]++;
 			}
-			dezena++;
+			numero[1]++;
 		}
-		centena++;
+		numero[0]++;
 	}
 }
