@@ -6,7 +6,7 @@
 /*   By: roaraujo <roaraujo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/03 04:58:36 by roaraujo          #+#    #+#             */
-/*   Updated: 2021/04/05 21:53:10 by roaraujo         ###   ########.fr       */
+/*   Updated: 2021/04/06 02:27:50 by roaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ to that int.
 
 #include <stdio.h>
 
-void ft_ft(int *nbr){
+void	ft_ft(int *nbr){
 	*nbr = 42;
 }
 
