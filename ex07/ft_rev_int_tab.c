@@ -1,20 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
+/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: roaraujo <roaraujo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/03 05:00:51 by roaraujo          #+#    #+#             */
-/*   Updated: 2021/04/06 15:55:45 by roaraujo         ###   ########.fr       */
+/*   Created: 2021/04/03 05:02:35 by roaraujo          #+#    #+#             */
+/*   Updated: 2021/04/06 15:57:01 by roaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_ultimate_div_mod(int *a, int *b)
+void	ft_swap(int *a, int *b)
 {
-	int segura_aqui_rapidao;
+	int guarda_rapidin;
 
-	segura_aqui_rapidao = *a;
-	*a = *a / *b;
-	*b = segura_aqui_rapidao % *b;
+	guarda_rapidin = *a;
+	*a = *b;
+	*b = guarda_rapidin;
+}
+
+void	ft_rev_int_tab(int *tab, int size)
+{
+	int count;
+
+	count = 0;
+	while (count++ <= (size / 2) + 1)
+	{
+		ft_swap(tab, tab + size - count);
+		tab++;
+		size--;
+	}
 }

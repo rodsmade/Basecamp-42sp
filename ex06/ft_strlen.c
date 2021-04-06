@@ -1,20 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: roaraujo <roaraujo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/03 05:00:51 by roaraujo          #+#    #+#             */
-/*   Updated: 2021/04/06 15:55:45 by roaraujo         ###   ########.fr       */
+/*   Created: 2021/04/03 05:02:05 by roaraujo          #+#    #+#             */
+/*   Updated: 2021/04/06 15:56:20 by roaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_ultimate_div_mod(int *a, int *b)
+int	ft_strlen(char *str)
 {
-	int segura_aqui_rapidao;
+	int qtd_caracteres;
 
-	segura_aqui_rapidao = *a;
-	*a = *a / *b;
-	*b = segura_aqui_rapidao % *b;
+	qtd_caracteres = 0;
+	while (*str != '\0')
+	{
+		qtd_caracteres++;
+		str++;
+	}
+	return (qtd_caracteres);
 }
