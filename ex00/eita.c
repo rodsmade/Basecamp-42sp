@@ -64,6 +64,11 @@ int	main(int argc, char *argv[])
 		direita_p_esquerda[3] = argv[16];
 
 /*
+int mapa[4][4];
+int *linha;
+int *coluna;
+
+mapa[linha][coluna];
 LINHAS:
 		esquerda_p_direita[0]	|	mapa[1][1] + mapa[1][2] + mapa[1][3] + mapa[1][4]	|	direita_p_esquerda[0]
 		esquerda_p_direita[1]	|	mapa[2][1] + mapa[2][2] + mapa[2][3] + mapa[2][4]	|	direita_p_esquerda[1]
@@ -81,3 +86,25 @@ COLUNAS:
 		return;
 
 }
+
+void sobe_linha(int *linha)
+{
+	linha--;
+}
+
+void desce_linha(int *linha)
+{
+	linha++;
+}
+
+void vai_pra_direita(int *coluna)
+{
+	coluna++;
+}
+
+void vai_pra_esquerda(int *coluna)
+{
+	coluna--;
+}
+
+
