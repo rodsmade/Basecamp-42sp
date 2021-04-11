@@ -1,17 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_input_valid.c                                :+:      :+:    :+:   */
+/*   ft_input_is_valid.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: roaraujo <roaraujo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/10 21:57:28 by roaraujo          #+#    #+#             */
-/*   Updated: 2021/04/10 21:58:05 by roaraujo         ###   ########.fr       */
+/*   Updated: 2021/04/10 23:57:31 by roaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int ft_input_is_valid(int argc, char *argv[])
 {
+	// Não esquecer de tratar os casos de núumeros negativos
 	/* Mais validações de entrada
 	os parzinhos podem ser: 1-4		2-3		4-1
 							1-3		2-2		3-2
