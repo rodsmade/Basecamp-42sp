@@ -6,7 +6,7 @@
 /*   By: roaraujo <roaraujo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/10 21:57:31 by roaraujo          #+#    #+#             */
-/*   Updated: 2021/04/11 23:00:48 by roaraujo         ###   ########.fr       */
+/*   Updated: 2021/04/11 23:47:29 by roaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,5 @@ int		main(int argc, char *argv[])
 		ft_prints_map(g_mapa);
 		return (1);
 	}
-	printf("entrada errada");
 	return (0);
 }

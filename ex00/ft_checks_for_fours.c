@@ -6,7 +6,7 @@
 /*   By: roaraujo <roaraujo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/10 23:37:02 by roaraujo          #+#    #+#             */
-/*   Updated: 2021/04/11 23:02:33 by roaraujo         ###   ########.fr       */
+/*   Updated: 2021/04/11 23:55:12 by roaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,20 +19,20 @@ void ft_checks_for_fours(char *g_mapa, char horizontal[2][4], char vertical[4][2
 	i = -1;
 	while (++i < 4)
 	{
-		// if (vertical[i][0] == '4')
-		// {
-		// 	g_mapa[i][0] = '1';
-		// 	g_mapa[i][1] = '2';
-		// 	g_mapa[i][2] = '3';
-		// 	g_mapa[i][3] = '4';
-		// }
-		// if (vertical[i][1] == '4')
-		// {
-		// 	g_mapa[i][3] = '1';
-		// 	g_mapa[i][2] = '2';
-		// 	g_mapa[i][1] = '3';
-		// 	g_mapa[i][0] = '4';
-		// }
+		if (vertical[i][0] == '4')
+		{
+			*(g_mapa + (i * 4 + 0)) = '1';
+			*(g_mapa + (i * 4 + 1)) = '2';
+			*(g_mapa + (i * 4 + 2)) = '3';
+			*(g_mapa + (i * 4 + 3)) = '4';
+		}
+		if (vertical[i][1] == '4')
+		{
+			*(g_mapa + (i * 4 + 3)) = '1';
+			*(g_mapa + (i * 4 + 2)) = '2';
+			*(g_mapa + (i * 4 + 1)) = '3';
+			*(g_mapa + (i * 4 + 0)) = '4';
+		}
 		if (*horizontal[i] == '4')
 		{
 			*(g_mapa + (0 * 4 + i)) = '1';
@@ -40,13 +40,13 @@ void ft_checks_for_fours(char *g_mapa, char horizontal[2][4], char vertical[4][2
 			*(g_mapa + (2 * 4 + i)) = '3';
 			*(g_mapa + (3 * 4 + i)) = '4';
 		}
-		// if (horizontal[1][i] == '4')
-		// {
-		// 	g_mapa[3][i] = '1';
-		// 	g_mapa[2][i] = '2';
-		// 	g_mapa[1][i] = '3';
-		// 	g_mapa[0][i] = '4';
-		// }
+		if (horizontal[1][i] == '4')
+		{
+			*(g_mapa + (3 * 4 + i)) = '1';
+			*(g_mapa + (2 * 4 + i)) = '2';
+			*(g_mapa + (1 * 4 + i)) = '3';
+			*(g_mapa + (0 * 4 + i)) = '4';
+		}
 	}
 }
 
