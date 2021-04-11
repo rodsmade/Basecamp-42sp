@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_input_is_valid.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: obrescia <obrescia@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: roaraujo <roaraujo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/10 21:57:28 by roaraujo          #+#    #+#             */
-/*   Updated: 2021/04/11 04:06:54 by obrescia         ###   ########.fr       */
+/*   Updated: 2021/04/11 18:38:59 by roaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,40 +35,38 @@
 	
 	*/
 
-int 	ft_arg_is_valid(int argc, char **argv)
-	{
-		if (argc == 2)
-		{
-			return (1);
-		}
-		else
-		{
-			return (0);
-		}	
-	}
+int 	ft_argc_is_valid(int argc, char **argv)
+{
+	if (argc == 2)
+		return (1);
+	else
+		return (0);
+}
 
 int 	ft_argv_is_valid(int argc, char **argv)
-	{
-		int a;
-
-		a = 0;
-		while (argv[1][a])
+{
+	int a;
+	int params_entrada;
+	
+	a = 0;
+	params_entrada = 0;
+	while (argv[1][a])
+		{
+			if (argv[1][a] != ' ')
 			{
-				if (argv[1][a] != ' ')
-				{
-					if (argv[1][a] > '0' && argv[1][a] < '5')
-						{				
-							//FAZ O ARRAY
-							return (1);
-						}
-					else
-						{
-							return (0);
-						}	
-					a++;
-				}
+				if (argv[1][a] > '0' && argv[1][a] < '5')
+					{
+						params_entrada++;
+					}
+				else
+						return (0);
+				a++;
 			}
-	}
+		}
+	if (params_entrada != 16)
+		return (0);
+	return (1);
+}
 
 
 int main(int argc, char **argv)
