@@ -6,7 +6,7 @@
 /*   By: roaraujo <roaraujo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/10 21:57:28 by roaraujo          #+#    #+#             */
-/*   Updated: 2021/04/11 19:10:15 by roaraujo         ###   ########.fr       */
+/*   Updated: 2021/04/11 19:13:45 by roaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ int		ft_input_is_valid(int argc, char **argv)
 	if (ft_argc_is_valid(argc))
 	{
 		if (ft_argv_is_valid(argv))
-			return (0);
+			return (1);
 		write(1, "Error\n", 6);
 		return (0);
 	}
