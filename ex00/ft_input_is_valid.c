@@ -6,12 +6,11 @@
 /*   By: roaraujo <roaraujo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/10 21:57:28 by roaraujo          #+#    #+#             */
-/*   Updated: 2021/04/11 19:13:45 by roaraujo         ###   ########.fr       */
+/*   Updated: 2021/04/11 19:28:25 by roaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
+#include "pamonha.h"
 
 // // int ft_impossible_pairs(int argc, char **argv)
 // // {
