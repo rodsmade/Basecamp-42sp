@@ -1,17 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_input_valid.c                                :+:      :+:    :+:   */
+/*   ft_input_is_valid.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: roaraujo <roaraujo@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: obrescia <obrescia@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/10 21:57:28 by roaraujo          #+#    #+#             */
-/*   Updated: 2021/04/10 21:58:05 by roaraujo         ###   ########.fr       */
+/*   Updated: 2021/04/11 04:06:54 by obrescia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_input_is_valid(int argc, char *argv[])
-{
+#include <unistd.h>
+#include <stdio.h>
+
+// int ft_input_is_valid(int argc, char **argv)
+// {
 	/* Mais validações de entrada
 	os parzinhos podem ser: 1-4		2-3		4-1
 							1-3		2-2		3-2
@@ -31,18 +34,55 @@ int ft_input_is_valid(int argc, char *argv[])
   esquerda_p_direita[3]	< = > direita_p_esquerda[3]
 	
 	*/
-	if (argc != 1 + 16)
+
+int 	ft_arg_is_valid(int argc, char **argv)
 	{
-		write (1, "Error\n", 6);
-		return (0);
-	}
-	while (--argc > 0)
-	{
-		if (*argv[argc] < '1' || *argv[argc] > '4')	// ñ sei se vai funcionar pq cada argumento é um "string"
+		if (argc == 2)
 		{
-			write (1, "Error\n", 6);
+			return (1);
+		}
+		else
+		{
+			return (0);
+		}	
+	}
+
+int 	ft_argv_is_valid(int argc, char **argv)
+	{
+		int a;
+
+		a = 0;
+		while (argv[1][a])
+			{
+				if (argv[1][a] != ' ')
+				{
+					if (argv[1][a] > '0' && argv[1][a] < '5')
+						{				
+							//FAZ O ARRAY
+							return (1);
+						}
+					else
+						{
+							return (0);
+						}	
+					a++;
+				}
+			}
+	}
+
+
+int main(int argc, char **argv)
+{	
+	if(ft_arg_is_valid(argc, argv))
+	{
+		if (ft_argv_is_valid(argc, argv))
+		{
+			printf("Tudo certo!\n");
 			return (0);
 		}
+	else
+	{
+		write (1, "Error\n", 6);
 	}
-	return (1);
 }
+
