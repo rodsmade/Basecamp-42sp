@@ -1,9 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   pamonha.h                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: roaraujo <roaraujo@student.42sp.org.br>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/04/12 00:30:49 by roaraujo          #+#    #+#             */
+/*   Updated: 2021/04/12 00:33:49 by roaraujo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
+#ifndef PAMONHA_H
+# define PAMONHA_H
 
-#include <stdlib.h> // malloc, free // oxe nao achou a bib ?????? ñ deixou compilar
-#include <unistd.h>
-#include <stdio.h>
+# include <stdlib.h>
+# include <unistd.h>
+# include <stdio.h>
 
 int		ft_input_is_valid(int argc, char **argv);
 void	ft_prints_map(char g_mapa[16]);
-void	ft_checks_for_fours(char g_mapa[16], char horizontal[2][4], char vertical[4][2]);
+void	ft_checks_for_fours(char g_mapa[16], char hor[2][4], char ver[4][2]);
+void	ft_checks_for_ones(char *g_mapa, char hor[2][4], char ver[4][2]);
+
+#endif

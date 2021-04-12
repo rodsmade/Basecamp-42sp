@@ -6,42 +6,24 @@
 /*   By: roaraujo <roaraujo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/11 00:10:41 by roaraujo          #+#    #+#             */
-/*   Updated: 2021/04/11 00:11:06 by roaraujo         ###   ########.fr       */
+/*   Updated: 2021/04/12 00:18:51 by roaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_checks_for_ones()
+void	ft_checks_for_ones(char *g_mapa, char hor[2][4], char ver[4][2])
 {
-	int linha;
-	int coluna;
-	
-// regra dos 1's nas linhas
-	linha = 0;
-	while (linha < 4)
-	{
-		if (esquerda_p_direita[linha] == '1')
-		{
-			mapa[linha][0] = '4';
-		}
-		if (direita_p_esquerda[linha] == '1')
-		{
-			mapa[linha][3] = '4';
-		}
-		i++;
-	}
+	int i;
 
-// regra dos 1's nas colunas
-	coluna = 0;
-	while (coluna < 4)
+	i = -1;
+	while (++i < 4)
 	{
-		if (cima_p_baixo[coluna] == '1')
-		{
-			mapa[0][coluna] = '4';
-		}
-		if (baixo_p_cima[coluna] == '1')
-		{
-			mapa[3][coluna] = '4';
-		}
-		i++;
+		if (ver[i][0] == '1')
+			*(g_mapa + (i * 4 + 0)) = '4';
+		if (ver[i][1] == '1')
+			*(g_mapa + (i * 4 + 3)) = '4';
+		if (hor[0][i] == '1')
+			*(g_mapa + (0 * 4 + i)) = '4';
+		if (hor[1][i] == '1')
+			*(g_mapa + (3 * 4 + i)) = '4';
 	}
 }

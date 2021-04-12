@@ -6,7 +6,7 @@
 /*   By: roaraujo <roaraujo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/10 21:57:28 by roaraujo          #+#    #+#             */
-/*   Updated: 2021/04/12 00:04:29 by roaraujo         ###   ########.fr       */
+/*   Updated: 2021/04/12 00:12:36 by roaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,13 @@
 // 	ñ podem ser:			1-1		2-4		3-3,	4-4
 // 											3-4		4-3
 // 													4-2
-// 		cima_p_baixo[0] < = > baixo_p_cima[0]
+// 		cima_p_baixo[0] 	< = > baixo_p_cima[0]
 //   esquerda_p_direita[0]	< = > direita_p_esquerda[0]
-// 		cima_p_baixo[1] < = > baixo_p_cima[1]
+// 		cima_p_baixo[1] 	< = > baixo_p_cima[1]
 //   esquerda_p_direita[1]	< = > direita_p_esquerda[1]
-// 		cima_p_baixo[2] < = > baixo_p_cima[2]
+// 		cima_p_baixo[2] 	< = > baixo_p_cima[2]
 //   esquerda_p_direita[2]	< = > direita_p_esquerda[2]
-// 		cima_p_baixo[3] < = > baixo_p_cima[3]
+// 		cima_p_baixo[3] 	< = > baixo_p_cima[3]
 //   esquerda_p_direita[3]	< = > direita_p_esquerda[3]
 // 	*/
 

@@ -6,7 +6,7 @@
 /*   By: roaraujo <roaraujo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/10 21:57:31 by roaraujo          #+#    #+#             */
-/*   Updated: 2021/04/12 00:03:40 by roaraujo         ###   ########.fr       */
+/*   Updated: 2021/04/12 00:20:46 by roaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ int		main(int argc, char *argv[])
 		g_dicas_vertical[2][1] = argv[1][28];
 		g_dicas_vertical[3][1] = argv[1][30];
 		ft_checks_for_fours(g_mapa, g_dicas_horizontal, g_dicas_vertical);
+		ft_checks_for_ones(g_mapa, g_dicas_horizontal, g_dicas_vertical);
 		ft_prints_map(g_mapa);
 		return (1);
 	}
