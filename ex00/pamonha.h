@@ -6,16 +6,14 @@
 /*   By: roaraujo <roaraujo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/12 00:30:49 by roaraujo          #+#    #+#             */
-/*   Updated: 2021/04/12 00:33:49 by roaraujo         ###   ########.fr       */
+/*   Updated: 2021/04/12 00:46:21 by roaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PAMONHA_H
 # define PAMONHA_H
 
-# include <stdlib.h>
 # include <unistd.h>
-# include <stdio.h>
 
 int		ft_input_is_valid(int argc, char **argv);
 void	ft_prints_map(char g_mapa[16]);
