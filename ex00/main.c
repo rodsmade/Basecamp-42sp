@@ -6,7 +6,7 @@
 /*   By: roaraujo <roaraujo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/10 21:57:31 by roaraujo          #+#    #+#             */
-/*   Updated: 2021/04/11 23:47:29 by roaraujo         ###   ########.fr       */
+/*   Updated: 2021/04/12 00:03:40 by roaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ char	g_mapa[16];
 int		main(int argc, char *argv[])
 {
 	int linha;
-	
+
 	if (ft_input_is_valid(argc, argv))
 	{
 		linha = -1;
-		while(++linha < 16)
+		while (++linha < 16)
 			g_mapa[linha] = 'X';
 		g_dicas_horizontal[0][0] = argv[1][0];
 		g_dicas_horizontal[0][1] = argv[1][2];

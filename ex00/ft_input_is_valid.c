@@ -6,12 +6,13 @@
 /*   By: roaraujo <roaraujo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/10 21:57:28 by roaraujo          #+#    #+#             */
-/*   Updated: 2021/04/11 19:28:25 by roaraujo         ###   ########.fr       */
+/*   Updated: 2021/04/12 00:04:29 by roaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pamonha.h"
 
+// TODO: Implementar validação dos parzinhos se der tempo
 // // int ft_impossible_pairs(int argc, char **argv)
 // // {
 // /* Mais validações de entrada
