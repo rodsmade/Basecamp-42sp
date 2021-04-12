@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_input_is_valid.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: roaraujo <roaraujo@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: arebecca <arebecca@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/10 21:57:28 by roaraujo          #+#    #+#             */
-/*   Updated: 2021/04/12 01:15:54 by roaraujo         ###   ########.fr       */
+/*   Updated: 2021/04/12 01:50:30 by arebecca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,33 +14,26 @@
 
 int		ft_pairs_are_valid(char **argv)
 {
-	int count_pares;
+	int count;
 
-	count_pares = 0;
-	while (count_pares < 7)
+	count = -1;
+	while (++count < 4)
 	{
-		if ((argv[1][count_pares] == '1' && argv[1][count_pares + 8] == '1')
-		|| (argv[1][count_pares] == '2' && argv[1][count_pares + 8] == '4')
-		|| (argv[1][count_pares] == '3' && argv[1][count_pares + 8] == '3')
-		|| (argv[1][count_pares] == '4' && argv[1][count_pares + 8] == '4')
-		|| (argv[1][count_pares] == '3' && argv[1][count_pares + 8] == '4')
-		|| (argv[1][count_pares] == '4' && argv[1][count_pares + 8] == '3')
-		|| (argv[1][count_pares] == '4' && argv[1][count_pares + 8] == '2'))
+		if ((argv[1][count * 2] == '1' && argv[1][count * 2 + 8] == '1')
+		|| (argv[1][count * 2] == '2' && argv[1][count * 2 + 8] == '4')
+		|| (argv[1][count * 2] == '3' && argv[1][count * 2 + 8] == '3')
+		|| (argv[1][count * 2] == '4' && argv[1][count * 2 + 8] == '4')
+		|| (argv[1][count * 2] == '3' && argv[1][count * 2 + 8] == '4')
+		|| (argv[1][count * 2] == '4' && argv[1][count * 2 + 8] == '3')
+		|| (argv[1][count * 2] == '4' && argv[1][count * 2 + 8] == '2')
+		|| (argv[1][16 + count * 2] == '1' && argv[1][24 + count * 2] == '1')
+		|| (argv[1][16 + count * 2] == '2' && argv[1][24 + count * 2] == '4')
+		|| (argv[1][16 + count * 2] == '3' && argv[1][24 + count * 2] == '3')
+		|| (argv[1][16 + count * 2] == '4' && argv[1][24 + count * 2] == '4')
+		|| (argv[1][16 + count * 2] == '3' && argv[1][24 + count * 2] == '4')
+		|| (argv[1][16 + count * 2] == '4' && argv[1][24 + count * 2] == '3')
+		|| (argv[1][16 + count * 2] == '4' && argv[1][24 + count * 2] == '2'))
 			return (0);
-		count_pares += 2;
-	}
-	count_pares = 16;
-	while (count_pares < 23)
-	{
-		if ((argv[1][count_pares] == '1' && argv[1][count_pares + 8] == '1')
-		|| (argv[1][count_pares] == '2' && argv[1][count_pares + 8] == '4')
-		|| (argv[1][count_pares] == '3' && argv[1][count_pares + 8] == '3')
-		|| (argv[1][count_pares] == '4' && argv[1][count_pares + 8] == '4')
-		|| (argv[1][count_pares] == '3' && argv[1][count_pares + 8] == '4')
-		|| (argv[1][count_pares] == '4' && argv[1][count_pares + 8] == '3')
-		|| (argv[1][count_pares] == '4' && argv[1][count_pares + 8] == '2'))
-			return (0);
-		count_pares += 2;
 	}
 	return (1);
 }
