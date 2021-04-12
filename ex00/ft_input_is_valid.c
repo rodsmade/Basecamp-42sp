@@ -6,13 +6,13 @@
 /*   By: roaraujo <roaraujo@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/10 21:57:28 by roaraujo          #+#    #+#             */
-/*   Updated: 2021/04/12 01:11:02 by roaraujo         ###   ########.fr       */
+/*   Updated: 2021/04/12 01:15:54 by roaraujo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "pamonha.h"
 
-int	ft_pairs_are_valid(char **argv)
+int		ft_pairs_are_valid(char **argv)
 {
 	int count_pares;
 
@@ -27,7 +27,7 @@ int	ft_pairs_are_valid(char **argv)
 		|| (argv[1][count_pares] == '4' && argv[1][count_pares + 8] == '3')
 		|| (argv[1][count_pares] == '4' && argv[1][count_pares + 8] == '2'))
 			return (0);
-		count_pares +=2;
+		count_pares += 2;
 	}
 	count_pares = 16;
 	while (count_pares < 23)
@@ -40,7 +40,7 @@ int	ft_pairs_are_valid(char **argv)
 		|| (argv[1][count_pares] == '4' && argv[1][count_pares + 8] == '3')
 		|| (argv[1][count_pares] == '4' && argv[1][count_pares + 8] == '2'))
 			return (0);
-		count_pares +=2;
+		count_pares += 2;
 	}
 	return (1);
 }
