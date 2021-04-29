@@ -24,4 +24,4 @@ Os Rushes foram ... (TBC)
 ## Exames
 Lorem ipsum etc.
 
-Você pode ler sobre minha experiência no Basecamp da 42 nesta série de posts (quase) diários que escrevi no Medium, começando aqui: https://rodsmade.medium.com/42-%EF%B8%8F-prepara%C3%A7%C3%A3o-pro-basecamp-8cba11f44af0
+Você pode ler sobre minha experiência no Basecamp da 42 nesta série de posts (quase) diários que escrevi no Medium, começando [aqui](https://rodsmade.medium.com/42-%EF%B8%8F-prepara%C3%A7%C3%A3o-pro-basecamp-8cba11f44af0)!
