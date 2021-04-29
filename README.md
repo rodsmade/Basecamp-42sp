@@ -13,7 +13,7 @@ Nas duas listas de Shell, vimos conceitos e comandos básicos de shell:
 * formatação e manipulação de output (`rev` / `cut` / `tr` / `sed` / `awk` / `grep`)
 * comparação entre arquivos (`diff` / `patch`)
 * magic files! 🧙🔮✨
-* outros comandos e funcionalidades (`groups ` / `echo ` / `cat ` / `wc ` / `ifconfig ` / `xargs ` / `bc`)
+* outros comandos e funcionalidades (`groups` / `echo` / `cat` / `wc` / `ifconfig` / `xargs` / `bc`)
 
 ## C
 Nas listas de c ... (TBC)
